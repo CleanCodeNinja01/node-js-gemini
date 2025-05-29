@@ -8,7 +8,7 @@ if (!process.env.API_KEY) {
   process.exit(1);
 }
 
-const genAI = new GoogleGenAI('AIzaSyD3AOBgY5-KBG0LlTbZTzrx_VPVDnlfvPo', {
+const genAI = new GoogleGenAI(process.env.local, {
   model: "gemini-pro",
   //   temperature: 0.7,
   //   maxOutputTokens: 1024,
